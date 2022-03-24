@@ -9,6 +9,9 @@ services:
       - mysql
     ports:
       - 8080:8080
+    deploy:
+      mode: replicated
+      replicas: 5
     networks:
       - my_network
     restart: always
